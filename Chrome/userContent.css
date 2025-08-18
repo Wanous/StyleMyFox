@@ -1,0 +1,33 @@
+@-moz-document url("about:newtab"), url("about:home") {
+    /* Hide Firefox logo */
+    .logo {
+        display: none !important;
+    }
+
+    /*The new image*/
+    body::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        background-image: url("Logo_Rose.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    /* Hide Firefox name image */
+    .logo-and-wordmark .wordmark {
+        /*display: none !important;*/
+    }
+    
+     /* Change search bar lenght */
+     .search-wrapper .search-inner-wrapper {
+        /*display: none !important;*/ /* Hide search bar */
+        border: 1px solid rgba(255,23,95,0.5) !important;
+        border-radius: 9px;
+        width: 70% !important;
+    }
+}

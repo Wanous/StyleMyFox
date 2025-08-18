@@ -1,0 +1,40 @@
+:root {
+  /* ===== Sidebar border (set style to 'none' to disable) ===== */
+  --sidebar-border-style: solid;          /* solid | dashed | dotted | none */
+  --sidebar-border-width: 2px;            /* 0px to hide */
+  --sidebar-border-color: #FF235E;        /* use 'transparent' to hide */
+  --sidebar-border-radius: 5px;
+
+  /* ===== Sidebar background ===== */
+  --sidebar-bg-color: transparent;        /* transparent to use Firefox default */
+  --sidebar-gradient: none;               /* linear-gradient([0-360]deg,#[color_to],#[color]) or 'none' */
+  --sidebar-bg-image: none;               /* url("image.png") or 'none' */
+
+  --sidebar-bg-image-repeat: no-repeat;   /* repeat or no-repeat */
+  --sidebar-bg-image-position: center;    /* center | left | right | bottom | top | top right ...*/
+  --sidebar-bg-image-size: cover;         /* cover | contain | auto | 50% */
+
+  /* ===== Tabs ===== */
+  --tab-border-style: solid;              /* solid | dashed | dotted | none */
+  --tab-border-width: 1px;
+  --tab-border-color: rgba(255,255,255,.5);
+  --tab-hover-border: rgba(255,23,94,.5);
+  --tab-hover-bg: rgba(255,23,94,.5);
+
+  /* ===== Titlebar buttons ===== */
+  --titlebar-icon-min-color: #FF235E;              /* Minimize button color */
+  --titlebar-icon-min-hover-color: #000000;        /* Minimize button hover color */
+  --titlebar-icon-min-hover-bg-color: #FF235E;     /* Minimize button hover bg color */
+
+  --titlebar-icon-max-color: #FF235E;              /* Maximize button color */
+  --titlebar-icon-max-hover-color: #000000;        /* Maximize button hover color */
+  --titlebar-icon-max-hover-bg-color: #FF235E;     /* Maximize button hover bg color */
+  
+  --titlebar-icon-restore-color: #FF235E;          /* Restore button color */
+  --titlebar-icon-restore-hover-color: #000000;    /* Restore button hover color */
+  --titlebar-icon-restore-hover-bg-color: #FF235E; /* Restore button hover bg color */
+  
+  --titlebar-icon-close-color: #FF235E;            /* Close button color */
+  --titlebar-icon-close-hover-bg-color: #FF0000;   /* Close button hover bg color */
+
+}
