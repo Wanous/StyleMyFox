@@ -1,15 +1,19 @@
 # StyleMyFox
+<div align=center>
+  <img alt="Taille du code GitHub" src="https://img.shields.io/github/languages/code-size/Wanous/StyleMyFox?label=taille%20du%20code">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Wanous/StyleMyFox?logo=github&style=plastic">
+  <img alt="License" src="https://img.shields.io/github/license/Wanous/StyleMyFox?style=plastic">
+</div>
+
 Style your Firefox with simple CSS configurations and easy to custom!
 
-
-## How to install :
+## How to install 
 1. Download the files
 3. Go to `about:profiles`
 2. Find your profile    ( *This is the profile in use and it cannot be deleted.* )
 3. Open the profile's root directory
-5. Move the files there
+5. Move the `chrome` files there
 6. Restart Firefox
-
 
 > [!NOTE]
 > This CSS doesn't change the color scheme of your firefox, so it may look different on your platform.
@@ -24,8 +28,9 @@ Style your Firefox with simple CSS configurations and easy to custom!
 > 
 > `layout.css.has-selector.enabled`
 
+For futher informations about what is userChrome.css and how to remove it check [this link](https://support.mozilla.org/en-US/kb/contributors-guide-firefox-advanced-customization).
 
-## How to Modify :
+## How to Modify 
 Every parameters to modify the configuration is on the `config.css` file.
 > [!NOTE]
 > Every parameters is explain on the file here's an extract to better comprehend : 
@@ -38,7 +43,7 @@ Every parameters to modify the configuration is on the `config.css` file.
   --sidebar-border-radius: 5px;
 ```
 
-## Specifications :
+## Specifications 
 
 This repository have been made with some features and elements from [this repository](https://github.com/Bali10050/FirefoxCSS/tree/alt).
 
@@ -46,6 +51,6 @@ You can remove them if you want :
    - Newtab new look          → line 3  to 8   `userChrome.css`
    - Animation bookmark icons → line 10 to 13  `userChrome.css`
 
-## About :
+## About 
 
 Certain parameters are not complete so bugs can occurs. Also the project will evolve in the future to provide more correction and feature. So if you don't want to miss those new things and support me at the same time, you can leave a ⭐ to this repository!
