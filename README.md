@@ -44,10 +44,13 @@ Every parameters to modify the configuration is on the `config.css` file.
 ```
 ## Example
 Here is my configuration :
-<img alt="Exemple_1.png" align="center"  height="60%" width="60%" src="Images/Exemple_1.png">
+
+<div><img alt="Exemple_1.png"  height="60%" width="60%" src="Images/Exemple_1.png"></div>
+
 You can have it in the `Configurations` file. His name is `FlowerPower`.
 > [!NOTE]
-> You can contribute to this project by adding your configuration. See `CONTRIBUTING.md`.
+> You can contribute to this project by adding your configuration. See `CONTRIBUTING.md` [Here](https://github.com/Wanous/StyleMyFox/blob/main/CONTRIBUTING.md).
+> 
 ## Specifications 
 
 This repository have been made with some features and elements from [this repository](https://github.com/Bali10050/FirefoxCSS/tree/alt).
