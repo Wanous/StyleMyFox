@@ -8,7 +8,7 @@
   <img alt="License" src="https://img.shields.io/github/license/Wanous/StyleMyFox?style=plastic">
 </div>
 
-Style your Firefox with simple CSS configurations and easy to custom!
+Style your Firefox with simple and easy to custom CSS configurations !
 
 ## How to install 
 1. Download the files
