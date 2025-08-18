@@ -42,7 +42,12 @@ Every parameters to modify the configuration is on the `config.css` file.
   --sidebar-border-color: #FF235E;        /* use 'transparent' to hide */
   --sidebar-border-radius: 5px;
 ```
-
+## Example
+Here is my configuration :
+<img alt="Exemple_1.png" align="center"  height="60%" width="60%" src="Images/Exemple_1.png">
+You can have it in the `Configurations` file. His name is `FlowerPower`.
+> [!NOTE]
+> You can contribute to this project by adding your configuration. See `CONTRIBUTING.md`.
 ## Specifications 
 
 This repository have been made with some features and elements from [this repository](https://github.com/Bali10050/FirefoxCSS/tree/alt).
