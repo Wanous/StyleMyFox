@@ -1,0 +1,170 @@
+@import url(config.css);
+
+/* Newtab hack */
+#tabs-newtab-button, #new-tab-button{transition: .3s !important;color: transparent !important; fill: FieldText !important; background: none !important; opacity: 20%; -moz-window-dragging: var(--WindowDraggingFromNewtabButton)}
+#tabs-newtab-button:hover, #new-tab-button:hover{transition: .3s !important; color: transparent !important; fill: FieldText !important; opacity: 90%;  background: none !important; -moz-window-dragging: var(--WindowDraggingFromNewtabButton)}
+#tabs-newtab-button > .toolbarbutton-icon , #new-tab-button > .toolbarbutton-icon{ background: none !important;}
+#tabs-newtab-button > .toolbarbutton-text{display: none !important}
+#new-tab-button{display: none !important}
+
+/*  Animation bookmark icons  */
+.bookmark-item .toolbarbutton-icon{opacity: 0!important; transition: .15s !important; width: 0!important; padding-left: 16px!important}
+.bookmark-item:hover .toolbarbutton-icon{opacity: 100!important; transition: .15s !important; display: inline-block!important; width: 16px!important; padding-left: 0!important}
+.bookmark-item:not([hover]) .toolbarbutton-icon{padding-left: 0!important}
+
+/*  Vertical Tab  */
+
+.tabbrowser-tab {
+  border-style: var(--tab-border-style, none) !important;
+  border-width: var(--tab-border-width, 0px) !important;
+  border-color: var(--tab-border-color, currentColor) !important;
+  transition: background 0.3s ease !important;
+}
+.tabbrowser-tab:hover {
+  border-color: var(--tab-hover-border, currentColor) !important;
+  background-color: var(--tab-hover-bg, transparent) !important;
+}
+
+
+/*  Vertical bar  */
+
+#sidebar-main, #sidebar-box {
+  /* Color fallback to Firefox variable if custom var is absent */
+  background-color: var(--sidebar-bg-color, var(--toolbar-bgcolor)) !important;
+
+  /* Background image */
+  background-image: var(--sidebar-bg-image, none) !important;
+  background-repeat: var(--sidebar-bg-image-repeat)!important;
+  background-position: var(--sidebar-bg-image-position, center)!important;
+  background-size: var(--sidebar-bg-image-size, auto)!important;
+  
+  /* Border */
+  border-style: var(--sidebar-border-style, none) !important;
+  border-width: var(--sidebar-border-width, 0px) !important;
+  border-color: #FF235E !important;
+  border-radius: var(--sidebar-border-radius, 0px) !important;
+}
+
+
+/*  Titlebar button fix#6322  */
+#nav-bar{ margin-right: 168px; }
+.titlebar-buttonbox{ position: absolute !important; right: 1; top: 0; height: 40px; }
+
+.titlebar-buttonbox-container{-moz-box-ordinal-group: auto;}
+.titlebar-button > .toolbarbutton-icon:-moz-lwtheme{-moz-context-properties: fill, stroke !important;}
+.titlebar-button > .toolbarbutton-icon {display: flex !important; height:unset !important; width: unset !important; appearance: -moz-window-decorations !important;}
+.titlebar-buttonbox{appearance: none !important}
+#titlebar .toolbarbutton-icon{-moz-context-properties: revert !important}
+
+/*  Destroy original titlebar buttons  */
+.titlebar-min {content: "" !important;}
+.titlebar-max {content: "" !important;}
+.titlebar-close {content: "" !important;}
+.titlebar-restore {content: "" !important;}
+
+/*  Titlebar buttons  -  Minimize button  */
+.titlebar-min {
+  fill: var(--titlebar-icon-min-color, --toolbarbutton-icon-fill) !important;  -moz-context-properties: fill !important; 
+  list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Crect transform='matrix(3.7795 0 0 3.7795 -39.998 -533.51)' x='14.552' y='145.13' width='2.6458' height='.26458' ry='3.1658e-6' fill='context-fill' style='paint-order:stroke fill markers'/%3E%3C/svg%3E%0A")!important;  
+  border-radius: 0!important; 
+  margin: 0!important; 
+  padding: 0!important; 
+  border: 0!important; 
+  height: 100%!important; 
+  align-content: center!important; 
+  width: 56px!important; 
+  appearance: none!important
+}
+.titlebar-min:hover {
+  fill: var(--titlebar-icon-min-hover-color, --toolbarbutton-icon-fill) !important;
+  background-color: var(--titlebar-icon-min-hover-bg-color, --toolbarbutton-icon-fill)!important
+}
+.titlebar-min:active {
+  background-color: color-mix(in srgb,currentColor 30%,transparent)!important
+}
+
+/*  Titlebar buttons  -  Maximize button  */
+.titlebar-max {
+  fill: var(--titlebar-icon-max-color, --toolbarbutton-icon-fill) !important; 
+  -moz-context-properties: fill !important; 
+  list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath transform='matrix(3.7795 0 0 3.7795 -101 -533.51)' d='m30.692 143.81v2.6458h2.6458v-2.6458zm0.26458 0.26459h2.1167v2.1167h-2.1167z' fill='context-fill' style='paint-order:stroke fill markers'/%3E%3C/svg%3E") !important;  
+  border-radius: 0!important; 
+  margin: 0!important; 
+  padding: 0!important; 
+  border: 0!important; 
+  height: 100%!important; 
+  align-content: center!important; 
+  width: 56px!important; 
+  appearance: none!important
+}
+.titlebar-max:hover {
+  fill: var(--titlebar-icon-max-hover-color, --toolbarbutton-icon-fill)  !important;
+  background-color: var(--titlebar-icon-max-hover-bg-color, --toolbarbutton-icon-fill)  !important
+}
+.titlebar-max:active {
+  background-color: color-mix(in srgb,currentColor 30%,transparent)!important
+}
+
+
+/*  Titlebar buttons  -  Restore button  */
+.titlebar-restore {
+  fill: var(--titlebar-icon-restore-color, --toolbarbutton-icon-fill) !important; 
+  -moz-context-properties: fill !important; 
+  list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath d='m17.001 10.016v2h-2v8.0001h8.0001v-2h2v-8.0001zm0.99998 1h6v6h-0.99998v-4.9999h-4.9999zm-2 2h6v6h-6z' fill='context-fill' stroke-width='3.7795' style='paint-order:stroke fill markers'/%3E%3C/svg%3E%0A")!important;  
+  border-radius: 0!important; 
+  margin: 0!important; 
+  padding: 0!important; 
+  border: 0!important; 
+  height: 100%!important; 
+  width: 56px!important; 
+  appearance: none!important
+}
+.titlebar-restore:hover {
+  fill: var(--titlebar-icon-restore-hover-color, --toolbarbutton-icon-fill) !important;
+  background-color:  var(--titlebar-icon-restore-hover-bg-color, --toolbarbutton-icon-fill)!important
+}
+.titlebar-restore:active {
+  background-color: color-mix(in srgb,currentColor 30%,transparent)!important
+}
+
+/*  Titlebar buttons  -  Close button  */
+.titlebar-close:not(:hover, :active) {
+  fill: var(--titlebar-icon-close-color, --toolbarbutton-icon-fill)!important; 
+  -moz-context-properties: fill !important; 
+  list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath transform='matrix(3.7796 0 0 3.7795 -165 -533.51)' d='m47.718 143.71-0.18707 0.18706 1.2294 1.2294-1.2294 1.2289 0.18707 0.18707 1.2294-1.2289 1.2289 1.2289 0.18707-0.18707-1.2289-1.2289 1.2289-1.2294-0.18707-0.18706-1.2289 1.2294z' fill='context-fill' style='paint-order:stroke fill markers'/%3E%3C/svg%3E%0A")!important; 
+  margin: 0 !important; 
+  padding: 0!important; 
+  border: 0!important; 
+  border-radius: 0!important; 
+  height: 100%!important; 
+  width: 56px!important; 
+  appearance: none!important
+}
+.titlebar-close:hover {
+  background-color: var(--titlebar-icon-close-hover-bg-color, #f44)!important; 
+  fill: var(--titlebar-icon-close-hover-color, --toolbarbutton-icon-fill) !important; 
+  -moz-context-properties: fill !important; 
+  list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath transform='matrix(3.7796 0 0 3.7795 -165 -533.51)' d='m47.718 143.71-0.18707 0.18706 1.2294 1.2294-1.2294 1.2289 0.18707 0.18707 1.2294-1.2289 1.2289 1.2289 0.18707-0.18707-1.2289-1.2289 1.2289-1.2294-0.18707-0.18706-1.2289 1.2294z' fill='context-fill' style='paint-order:stroke fill markers;fill:%23ffffff' /%3E%3C/svg%3E%0A")!important;  
+  margin: 0 !important; 
+  padding: 0!important; 
+  border: 0!important; 
+  border-radius: 0!important; 
+  height: 100%!important; 
+  width: 56px!important; 
+  appearance: none!important
+}
+.titlebar-close:active {
+  background-color: #f33!important;  
+  fill: var(--toolbarbutton-icon-fill) !important; 
+  -moz-context-properties: fill !important; 
+  list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath transform='matrix(3.7796 0 0 3.7795 -165 -533.51)' d='m47.718 143.71-0.18707 0.18706 1.2294 1.2294-1.2294 1.2289 0.18707 0.18707 1.2294-1.2289 1.2289 1.2289 0.18707-0.18707-1.2289-1.2289 1.2289-1.2294-0.18707-0.18706-1.2289 1.2294z' fill='context-fill' style='paint-order:stroke fill markers;fill:%23ffffff' /%3E%3C/svg%3E%0A")!important;  
+  margin: 0 !important; 
+  padding: 0!important; 
+  border: 0!important; 
+  border-radius: 0!important; 
+  height: 100%!important; 
+  width: 56px!important; 
+  appearance: none!important
+}
+
+
