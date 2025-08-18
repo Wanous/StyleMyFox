@@ -1,4 +1,7 @@
 # StyleMyFox
+
+![Logo.png](Images/Banniere_StyleMyFox.png)
+
 <div align=center>
   <img alt="Taille du code GitHub" src="https://img.shields.io/github/languages/code-size/Wanous/StyleMyFox?label=taille%20du%20code">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Wanous/StyleMyFox?logo=github&style=plastic">
