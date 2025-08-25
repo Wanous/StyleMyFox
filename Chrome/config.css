@@ -14,7 +14,7 @@
   
   /* ===== Sidebar border (set style to 'none' to disable) ===== */
   --sidebar-border-style: solid;          /* solid | dashed | dotted | none */
-  --sidebar-border-width: 1px;            /* 0px to hide */
+  --sidebar-border-width: 0px;            /* 0px to hide */
   /*--sidebar-border-color: #FFFFFF;      doesn't work --> to modify go to userChrome.css line 2*/
   --sidebar-border-radius: 5px;           
 
@@ -37,7 +37,7 @@
   --tab-border-color: rgba(255,255,255,.9);      /* Color of the border of the tabs*/
   
   --tab-hover-border: rgba(255,255,255,.5);      /* Border color when mouse hover*/
-  --tab-hover-width: 1px;                        /* Border width when mouse hover*/
+  --tab-hover-width: 0px;                        /* Border width when mouse hover*/
   --tab-hover-bg: rgba(255,255,255,.0);          /* Border bg color  when mouse hover*/
 
   /* ===== Titlebar buttons ===== */
@@ -83,7 +83,7 @@
 
   --search-bar-border-style: solid;             /* solid | dashed | dotted | none */
   --search-bar-border-color: #FFFFFF;           /* Search bar border color */
-  --search-bar-border-width: 1px;               /* Search bar border width */
+  --search-bar-border-width: 0px;               /* Search bar border width */
   --search-bar-border-radius: 9px;              /* Search bar border radius */
  
 
