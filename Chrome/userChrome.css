@@ -1,52 +1,70 @@
 @import url(config.css);
+:root{--sidebar-border-width-correction:#FFFFFF}
 
-/* Newtab hack */
-#tabs-newtab-button, #new-tab-button{transition: .3s !important;color: transparent !important; fill: FieldText !important; background: none !important; opacity: 20%; -moz-window-dragging: var(--WindowDraggingFromNewtabButton)}
-#tabs-newtab-button:hover, #new-tab-button:hover{transition: .3s !important; color: transparent !important; fill: FieldText !important; opacity: 90%;  background: none !important; -moz-window-dragging: var(--WindowDraggingFromNewtabButton)}
-#tabs-newtab-button > .toolbarbutton-icon , #new-tab-button > .toolbarbutton-icon{ background: none !important;}
-#tabs-newtab-button > .toolbarbutton-text{display: none !important}
-#new-tab-button{display: none !important}
 
-/*  Animation bookmark icons  */
-.bookmark-item .toolbarbutton-icon{opacity: 0!important; transition: .15s !important; width: 0!important; padding-left: 16px!important}
-.bookmark-item:hover .toolbarbutton-icon{opacity: 100!important; transition: .15s !important; display: inline-block!important; width: 16px!important; padding-left: 0!important}
-.bookmark-item:not([hover]) .toolbarbutton-icon{padding-left: 0!important}
+/*  Customization navbar fix  */
+#wrapper-urlbar-container{width: 100px !important}
+[title="Flexible Space"]{display: none !important}
+
+/*  Toolbar cleanup  */
+#nav-bar-customization-target { & > :is(toolbarbutton, toolbaritem):first-child, & > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem) { padding-inline-start: 0 !important; } }
 
 /*  Vertical Tab  */
+
+.tab-icon-image {
+	/*margin-left: 2px !important;*/
+	height: 18px !important;
+	width: 18px !important;
+}
 
 .tabbrowser-tab {
   border-style: var(--tab-border-style, none) !important;
   border-width: var(--tab-border-width, 0px) !important;
   border-color: var(--tab-border-color, currentColor) !important;
+
   transition: background 0.3s ease !important;
 }
+
 .tabbrowser-tab:hover {
   border-color: var(--tab-hover-border, currentColor) !important;
-  background-color: var(--tab-hover-bg, transparent) !important;
+  border-width: var(--tab-hover-width)!important; 
+  background-color:var(--tab-hover-bg)!important;
 }
 
-
-/*  Vertical bar  */
+/*  Sidebar  */
 
 #sidebar-main, #sidebar-box {
-  /* Color fallback to Firefox variable if custom var is absent */
+
   background-color: var(--sidebar-bg-color, var(--toolbar-bgcolor)) !important;
 
   /* Background image */
-  background-image: var(--sidebar-bg-image, none) !important;
+  background-image: var(--sidebar-bg-image),var(--sidebar-gradient) !important;
   background-repeat: var(--sidebar-bg-image-repeat)!important;
   background-position: var(--sidebar-bg-image-position, center)!important;
-  background-size: var(--sidebar-bg-image-size, auto)!important;
+  background-size: var(--sidebar-bg-image-size) auto !important; /* largeur fixe, hauteur auto */
+
   
   /* Border */
   border-style: var(--sidebar-border-style, none) !important;
   border-width: var(--sidebar-border-width, 0px) !important;
-  border-color: var(--sidebar-border-color, currentColor) !important;
+  border-color: var(--sidebar-border-width-correction) !important;
   border-radius: var(--sidebar-border-radius, 0px) !important;
 }
 
 
+/* Sidebar bottom area */
+
+#sidebar-tools-and-extensions-splitter {
+  display:var(--sidebar-tools-and-extensions-splitter,flex) !important;
+}
+
+.button-background {
+  display: var(--sidebar-tools-and-extensions-buttons,flex) !important;
+}
+
+
 /*  Titlebar button fix#6322  */
+
 #nav-bar{ margin-right: 168px; }
 .titlebar-buttonbox{ position: absolute !important; right: 1; top: 0; height: 40px; }
 
@@ -61,6 +79,7 @@
 .titlebar-max {content: "" !important;}
 .titlebar-close {content: "" !important;}
 .titlebar-restore {content: "" !important;}
+
 
 /*  Titlebar buttons  -  Minimize button  */
 .titlebar-min {
@@ -166,5 +185,9 @@
   width: 56px!important; 
   appearance: none!important
 }
+
+
+
+
 
 

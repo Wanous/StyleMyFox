@@ -1,33 +1,49 @@
+@import url(config.css);
 @-moz-document url("about:newtab"), url("about:home") {
-    /* Hide Firefox logo */
-    .logo {
-        display: none !important;
-    }
 
-    /*The new image*/
-    body::before {
-        content: "";
-        position: absolute;
-        top: 20%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-        width: 60px;
-        height: 60px;
-        background-image: url("Logo_Rose.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  body {
+    /*  background-color: var(--newtab-bg-color) !important;
+     * background-image: var(--newtab-bg-image)!important;
+     * background-position: var(--newtab-bg-position, center) !important;
+     * background-size: var(--newtab-bg-size, cover) !important;
+     * background-repeat: var(--newtab-bg-size, no-repeat) !important;
+     * color: var(--newtab-link-color, inherit) !important; */
+  }
+  
+  /* Replace Firefox logo */
+  .logo {
+    opacity: var(--newtab-logo-opacity,1) !important;
+    background-image: var(--newtab-logo-image,initial) !important;
+    background-size : cover !important;;
+    height: var(--newtab-logo-height,64px) !important;
+    width: var(--newtab-logo-width,64px) !important;
+  }
     
-    /* Hide Firefox name image */
-    .logo-and-wordmark .wordmark {
-        /*display: none !important;*/
-    }
+  /* Hide Firefox name image */
+  .logo-and-wordmark .wordmark {
+    opacity: var(--newtab-wordmark-opacity,1) !important;
+  }
+  
+  .search-wrapper, #newtab-search-container, .search-container{
+     opacity: var(--newtab-container-opacity,1) !important;
+     position: absolute !important;
+     top: var(--newtab-container-top, 30%) !important;
+     left: var(--newtab-container-left, 50%)!important;
+     transform: translate(-50%,-50%) !important;
+  }
     
-     /* Change search bar lenght */
-     .search-wrapper .search-inner-wrapper {
-        /*display: none !important;*/ /* Hide search bar */
-        border: 1px solid rgba(255,23,95,0.5) !important;
-        border-radius: 9px;
-        width: 70% !important;
-    }
+  /* Change search bar lenght */
+  .search-wrapper .search-inner-wrapper {
+     opacity: var(--search-bar-opacity,1)  !important;
+     border-style: var(--search-bar-border-style,none)!important;
+     border-width:  var(--search-bar-border-width,none)!important;
+     border-color: var(--search-bar-border-color,transparent)!important;
+     border-radius:var(--search-bar-border-radius,transparent)!important;
+   
+     width: var(--search-bar-width,100%)  !important;
+  }    
+
+  a {
+    color: var(--newtab-link-color, #0a84ff) !important;
+  }
 }
