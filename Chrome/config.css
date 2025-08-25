@@ -1,6 +1,10 @@
-@import url(hacks/Newtab_look.css);
-@import url(hacks/Animated_bookmarks.css);
 
+/* =====================================================
+ *  UCSS "Hacks"
+ * ===================================================== */
+
+@import url(hacks/Newtab_look.css);        /* Changes the look of the New Tab button */
+@import url(hacks/Animated_bookmarks.css); /* Adds a animation to the bookmarks */
 
 :root {
   
@@ -17,7 +21,7 @@
   /* ===== Sidebar background ===== */
   --sidebar-bg-color: transparent;        /* transparent to use Firefox default */
   --sidebar-gradient: none;               /* linear-gradient([0-360]deg,#[color_to],#[color]) or 'none' */
-  --sidebar-bg-image: none;               /* url("images/Sidebar_background.png") or 'none' (modify background.png with your file in the chrome folder)*/
+  --sidebar-bg-image: none;               /* url("images/Sidebar_background.png") or 'none' (modify Sidebar_background.png with your file in the chrome folder)*/
 
   --sidebar-bg-image-repeat: no-repeat;   /* repeat or no-repeat */
   --sidebar-bg-image-position: -0px;      /* offset_x px | center | left | right | bottom | top | top right ...*/
