@@ -1,40 +1,90 @@
+
+/* =====================================================
+ *  CSS "Hacks"
+ * ===================================================== */
+
+@import url(hacks/Newtab_look.css);        /* Changes the look of the New Tab button */
+@import url(hacks/Animated_bookmarks.css); /* Adds a animation to the bookmarks */
+
 :root {
+  
+  /* =====================================================
+   *  USERCHROME SETTINGS
+   * ===================================================== */
+  
   /* ===== Sidebar border (set style to 'none' to disable) ===== */
   --sidebar-border-style: solid;          /* solid | dashed | dotted | none */
-  --sidebar-border-width: 2px;            /* 0px to hide */
-  --sidebar-border-color: #FF235E;        /* use 'transparent' to hide */
-  --sidebar-border-radius: 5px;
+  --sidebar-border-width: 1px;            /* 0px to hide */
+  /*--sidebar-border-color: #FFFFFF;      doesn't work --> to modify go to userChrome.css line 2*/
+  --sidebar-border-radius: 5px;           
 
   /* ===== Sidebar background ===== */
   --sidebar-bg-color: transparent;        /* transparent to use Firefox default */
   --sidebar-gradient: none;               /* linear-gradient([0-360]deg,#[color_to],#[color]) or 'none' */
-  --sidebar-bg-image: url(FlowerBackground.png);               /* url("image.png") or 'none' */
+  --sidebar-bg-image: url("images/Sidebar_background.png");               /* url("images/Sidebar_background.png") or 'none' (modify Sidebar_background.png with your file in the chrome folder)*/
 
   --sidebar-bg-image-repeat: no-repeat;   /* repeat or no-repeat */
-  --sidebar-bg-image-position: bottom;    /* center | left | right | bottom | top | top right ...*/
-  --sidebar-bg-image-size: cover;         /* cover | contain | auto | 50% */
+  --sidebar-bg-image-position: bottom;    /* offset_x px | center | left | right | bottom | top | top right ...*/
+  --sidebar-bg-image-size: contain;       /* cover | contain | auto | 50% */
+  
+  /* ===== Sidebar tools and extensions ===== */
+  --sidebar-tools-and-extensions-splitter: none; /* disable the splitter (none/flex) */
+  --sidebar-tools-and-extensions-buttons: none;  /* disable the buttons (none/flex)  */
 
   /* ===== Tabs ===== */
-  --tab-border-style: none;              /* solid | dashed | dotted | none */
-  --tab-border-width: 1px;
-  --tab-border-color: rgba(255,255,255,.5);
-  --tab-hover-border: rgba(255,23,94,.5);
-  --tab-hover-bg: rgba(255,23,94,.5);
+  --tab-border-style: solid;                     /* solid | dashed | dotted | none */
+  --tab-border-width: 0px;                       /* Width of the border of the tabs*/
+  --tab-border-color: rgba(255,255,255,.9);      /* Color of the border of the tabs*/
+  
+  --tab-hover-border: rgba(255,23,94,.5);      /* Border color when mouse hover*/
+  --tab-hover-width: 1px;                        /* Border width when mouse hover*/
+  --tab-hover-bg: rgba(255,23,94,.3);          /* Border bg color  when mouse hover*/
 
   /* ===== Titlebar buttons ===== */
   --titlebar-icon-min-color: #FF235E;              /* Minimize button color */
   --titlebar-icon-min-hover-color: #000000;        /* Minimize button hover color */
-  --titlebar-icon-min-hover-bg-color: #FF235E;     /* Minimize button hover bg color */
+  --titlebar-icon-min-hover-bg-color: #FF235EFF;   /* Minimize button hover bg color */
 
   --titlebar-icon-max-color: #FF235E;              /* Maximize button color */
   --titlebar-icon-max-hover-color: #000000;        /* Maximize button hover color */
-  --titlebar-icon-max-hover-bg-color: #FF235E;     /* Maximize button hover bg color */
+  --titlebar-icon-max-hover-bg-color: #FF235EFF;   /* Maximize button hover bg color */
   
   --titlebar-icon-restore-color: #FF235E;          /* Restore button color */
   --titlebar-icon-restore-hover-color: #000000;    /* Restore button hover color */
-  --titlebar-icon-restore-hover-bg-color: #FF235E; /* Restore button hover bg color */
+  --titlebar-icon-restore-hover-bg-color: #FF235EFF; /* Restore button hover bg color */
   
   --titlebar-icon-close-color: #FF235E;            /* Close button color */
   --titlebar-icon-close-hover-bg-color: #FF0000;   /* Close button hover bg color */
+  
+
+  /* =====================================================
+   *  USERCONTENT SETTINGS
+   *  Applies to about:newtab, about:home, etc.
+   * ===================================================== */
+
+  /* ===== Logos + Seach bar =====*/  
+  --newtab-container-opacity: 1; /*WARNING: this hides everything */
+  --newtab-container-top: 50%;   /*Y position of everything */
+  --newtab-container-left: 50%;  /*X position of everything */
+  
+  /* ===== Firefox logo replacement =====*/
+  --newtab-logo-opacity: 1 ;                    /* Hide Firefox logo (1-yes/0-no) */
+  --newtab-logo-image: url("images/Logo.png");  /* Change Logo.png in the "images" folder to change the logo */
+  --newtab-logo-width: 64px;                    /* Width of the logo */
+  --newtab-logo-height: 64px;                   /* Height of the logo */
+  
+  /* ===== Firefox wordmark =====*/
+  --newtab-wordmark-opacity: 1 ;                /* Hide Firefox wordmark (1-yes/0-no) */
+  
+  /* ===== Search bar =====*/
+  
+  --search-bar-opacity: 0;                      /* Hide search bar (1-yes/0-no)*/
+  --search-bar-width: 100%;                     /* Search bar width */
+
+  --search-bar-border-style: solid;             /* solid | dashed | dotted | none */
+  --search-bar-border-color: #FF235E;           /* Search bar border color */
+  --search-bar-border-width: 0px;               /* Search bar border width */
+  --search-bar-border-radius: 9px;              /* Search bar border radius */
+ 
 
 }
