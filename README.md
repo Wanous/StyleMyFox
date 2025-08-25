@@ -65,3 +65,6 @@ You can remove them if you want :
 ## About 
 
 Certain parameters are not complete so bugs can occurs. Also the project will evolve in the future to provide more correction and feature. So if you don't want to miss those new things and support me at the same time, you can leave a ⭐ to this repository!
+
+Thanks [![Dr-DeathDefying](https://img.shields.io/badge/Dr-DeathDefying-FF235E?style=flat&logo=github&logoColor=white&labelColor=FF235E)](https://github.com/Dr-DeathDefying)
+ for the idea 🫶 
