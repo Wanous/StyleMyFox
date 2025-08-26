@@ -52,7 +52,7 @@ Every parameters to modify the configuration is on the `config.css` file.
 ## Example
 Here is my configuration :
 
-<div><img alt="Exemple_1.png"  height="60%" width="60%" src="Images/Exemple_1.png"></div>
+<div><img alt="Example n°1"  height="60%" width="60%" src="Images/Example_1.png"></div>
 
 You can have it in the `Configurations` file. His name is `FlowerPower`.
 > [!NOTE]
